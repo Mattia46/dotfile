@@ -24,3 +24,16 @@ ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
 ssh -T git@github.com
+
+#links
+ln -s dotfile/.oh-my-zsh/z.sh z.sh
+ln -s dotfile/.vimrc .vimrc
+ln -s dotfile/.zshrc .zshrc
+ln -s dotfile/.gitconfig .gitconfig
+ln -s dotfile/.oh-my-zsh .oh-my-zsh
+ln -s dotfile/.tmux-conf .tmux-conf
+ln -s dotfile/.vim .vim
+ln -s dotfile/.wallpaper .wallpaper
+ln -s dotfile/.xinitrc .xinitrc
+ln -s dotfile/.Xmodmap .Xmodmap
+
