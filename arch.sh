@@ -2,6 +2,14 @@ sudo pacman -S yarn
 sudo pacman -S the_silver_searcher
 sudo pacman -S xclip
 sudo pacman -S gvim
+sudo pacman -S gvim
+sudo pacman -S curl
+
+#zsh
+sudo pacman -S zsh
+chsh -s $(which zsh)
+sudo curl -L http://install.ohmyz.sh | sh
+cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 #git
 git config --global user.name "Mattia46"
@@ -15,4 +23,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
-sh -T git@github.com
+ssh -T git@github.com
