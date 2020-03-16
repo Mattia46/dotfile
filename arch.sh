@@ -1,22 +1,16 @@
-sudo pacman -S yarn
 sudo pacman -S the_silver_searcher
 sudo pacman -S xclip
 sudo pacman -S gvim
 sudo pacman -S gvim
 sudo pacman -S curl
 
-#zsh
+# zsh
 sudo pacman -S zsh
 chsh -s $(which zsh)
 sudo curl -L http://install.ohmyz.sh | sh
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
-#git
-git config --global user.name "Mattia46"
-git config --global user.email "mattia.assogna@gmail.com"
-git config --global core.autocrlf input
-git config --global core.safecrlf true
-
+# ssh
 ssh-keygen -t rsa -b 4096 -C "mattia.assogna@gmail.com"
 #PASSWORD
 eval "$(ssh-agent -s)"
@@ -25,15 +19,14 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
 ssh -T git@github.com
 
-#links
-ln -s dotfile/.oh-my-zsh/z.sh z.sh
-ln -s dotfile/.vimrc .vimrc
-ln -s dotfile/.zshrc .zshrc
-ln -s dotfile/.gitconfig .gitconfig
-ln -s dotfile/.oh-my-zsh .oh-my-zsh
-ln -s dotfile/.tmux-conf .tmux-conf
-ln -s dotfile/.vim .vim
-ln -s dotfile/.wallpaper .wallpaper
-ln -s dotfile/.xinitrc .xinitrc
-ln -s dotfile/.Xmodmap .Xmodmap
+# links
+ln -s dotfile/vimrc ~/.vimrc
+ln -s dotfile/zshrc ~/.zshrc
+ln -s dotfile/gitconfig ~/.gitconfig
+ln -s dotfile/gitignore ~/.gitignore
+ln -s dotfile/tmux-conf ~/.tmux-conf
+ln -s dotfile/vim ~/.vim
+ln -s dotfile/wallpaper ~/.wallpaper
+ln -s dotfile/xinitrc ~/.xinitrc
+ln -s dotfile/Xmodmap ~/.Xmodmap
 
