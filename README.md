@@ -2,12 +2,15 @@
 
 ```
 git clone git@github.com:Mattia46/.vim.git
-ln -s ~/.vim/Vundle.vim ~/.vim/bundle
-ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/zshrc ~/.zshrc
-ln -s ~/.vim/tmux.conf ~/.tmux.conf
-ln -s ~/.vim/.agignore ~/.agignore
-ln -s ~/.vim/.gitignore ~/.gitignore
+ln -s dotfile/vimrc ~/.vimrc
+ln -s dotfile/zshrc ~/.zshrc
+ln -s dotfile/gitconfig ~/.gitconfig
+ln -s dotfile/gitignore ~/.gitignore
+ln -s dotfile/tmux-conf ~/.tmux-conf
+ln -s dotfile/vim ~/.vim
+ln -s dotfile/wallpaper ~/.wallpaper
+ln -s dotfile/xinitrc ~/.xinitrc
+ln -s dotfile/Xmodmap ~/.Xmodmap
 vim +PluginInstall
 
 ```
