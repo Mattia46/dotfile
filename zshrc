@@ -1,8 +1,5 @@
 ZSH_THEME="af-magic"
 
-alias show_hidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
-alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
-
 #Mattia GitHub shortcut
 alias add='git add .'
 alias com='git commit -m'
@@ -30,19 +27,13 @@ alias tmn='tmux new-session -s'
 alias tmclose='tmux detach' # detach the current session leaving it open
 alias tmkill='tmux kill-session -t'
 
-alias port='~/.scripts/showOpenPorts.sh'
-
-# Sync Notes
-alias sync='~/.scripts/updateNotes.sh'
-
 # Audio Linux
 alias audio='pavucontrol'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 #vi in bash
 set -o vi
+
+export PATH=~/dotfile/scripts:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin
