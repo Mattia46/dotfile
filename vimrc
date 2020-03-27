@@ -29,6 +29,7 @@ Plugin 'mattn/calendar-vim'
 " Syntax and Highlight
 Plugin 'yuezk/vim-js'
 Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'jparise/vim-graphql'
 
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'

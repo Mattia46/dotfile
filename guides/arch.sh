@@ -1,8 +1,5 @@
-sudo pacman -S the_silver_searcher
-sudo pacman -S xclip
-sudo pacman -S gvim
-sudo pacman -S gvim
-sudo pacman -S curl
+sudo pacman -S the_silver_searcher xclip gvim curl ranger
+sudo pacman -S w3m # Image preview for ranger
 
 # zsh
 sudo pacman -S zsh
@@ -29,4 +26,4 @@ ln -s dotfile/vim ~/.vim
 ln -s dotfile/wallpaper ~/.wallpaper
 ln -s dotfile/xinitrc ~/.xinitrc
 ln -s dotfile/Xmodmap ~/.Xmodmap
-
+ln -s dotfile/ranger.conf ~/.config/ranger/rc.conf
