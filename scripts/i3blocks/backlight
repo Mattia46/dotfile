@@ -20,6 +20,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+if [ $(hostname) == "archDesktop" ]; then
+  exit 1
+fi
+
 STEP_SIZE=${STEP_SIZE:-5}
 USE_SUDO=${USE_SUDO:-0}
 
