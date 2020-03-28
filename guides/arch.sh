@@ -31,3 +31,6 @@ ln -s ~/dotfile/wallpaper ~/.wallpaper
 ln -s ~/dotfile/xinitrc ~/.xinitrc # if DMG ~/.xsession
 ln -s ~/dotfile/Xmodmap ~/.Xmodmap
 ln -s ~/dotfile/ranger.conf ~/.config/ranger/rc.conf
+ln -s ~/dotfile/i3config ~/.config/i3/config
+ln -s ~/dotfile/i3blocks ~/.config/i3blocks/config
+
