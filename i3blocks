@@ -8,7 +8,7 @@ interval=3600
 color=#A4C2F4
 
 [mediaplayer]
-command=$HOME/dotfiles/scripts/i3blocks/mediaplayerA
+command=$HOME/dotfile/scripts/i3blocks/mediaplayerA
 instance=spotify
 interval=5
 signal=10
@@ -18,27 +18,27 @@ command=echo "$(curl ifconfig.me)"
 interval=60
 
 [wifi]
-command=$HOME/dotfiles/scripts/i3blocks/wifi
+command=$HOME/dotfile/scripts/i3blocks/wifi
 INTERFACE=wlp3s0
 interval=5
 
 [bandwidth3]
-command=$HOME/dotfiles/scripts/i3blocks/bandwidth
+command=$HOME/dotfile/scripts/i3blocks/bandwidth
 interval=persist
 markup=pango
 
 [disk]
-command=$HOME/dotfiles/scripts/i3blocks/disk
+command=$HOME/dotfile/scripts/i3blocks/disk
 LABEL=
 interval=30
 
 [memory]
-command=$HOME/dotfiles/scripts/i3blocks/memory
+command=$HOME/dotfile/scripts/i3blocks/memory
 label=RAM
 interval=30
 
 [cpu_usage]
-command=$HOME/dotfiles/scripts/i3blocks/cpu_usage
+command=$HOME/dotfile/scripts/i3blocks/cpu_usage
 interval=10
 LABEL=
 T_WARN=50
@@ -46,7 +46,7 @@ T_CRIT=80
 DECIMALS=2
 #
 [temperature]
-command=$HOME/dotfiles/scripts/i3blocks/temperature
+command=$HOME/dotfile/scripts/i3blocks/temperature
 label=
 interval=10
 T_WARN=70
@@ -54,18 +54,18 @@ T_CRIT=85
 #SENSOR_CHIP=""
 
 [volume-pulseaudio]
-command=$HOME/dotfiles/scripts/i3blocks/volume-pulseaudio
+command=$HOME/dotfile/scripts/i3blocks/volume-pulseaudio
 interval=1
 SHORT_FORMAT="${SYMB}${VOL}%"
 LONG_FORMAT="${SYMB}${VOL}%"
 
 [backlight]
-command=$HOME/dotfiles/scripts/i3blocks/backlight
+command=$HOME/dotfile/scripts/i3blocks/backlight
 label=
 interval=1
 
 [battery]
-command=$HOME/dotfiles/scripts/i3blocks/battery
+command=$HOME/dotfile/scripts/i3blocks/battery
 markup=pango
 interval=1
 
