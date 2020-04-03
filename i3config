@@ -161,5 +161,4 @@ bar {
 }
 
 exec --no-startup-id blueman-applet
-#exec xrandr --output eDP-1 --mode 1600x900
-#exec surkshark-vpn attach
+#exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
