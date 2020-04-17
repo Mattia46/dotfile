@@ -44,7 +44,7 @@ function caskModules() {
 }
 
 function setZsh(){
-  chsh -s /usr/local/bin/zsh
+  chsh -s /bin/zsh
   curl -L http://install.ohmyz.sh | sh
   cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
   brew install z
