@@ -36,4 +36,16 @@ alias audio='pavucontrol'
 #vi in bash
 set -o vi
 
-export PATH=~/dotfile/scripts:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin
+export PATH=~/dotfile/scripts:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin
+
+# Export JAVA 1.8
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
+export HYBRIS_ROOT=~/GSK/Hybris/dev
+export DUMPS=~/GSK/Hybris/dumps
+export VAGRANT_ROOT=~/GSK/Hybris/gskdvagrant
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ma723920/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ma723920/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ma723920/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ma723920/google-cloud-sdk/completion.zsh.inc'; fi
