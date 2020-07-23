@@ -30,6 +30,7 @@ Plugin 'mattn/calendar-vim'
 Plugin 'yuezk/vim-js'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'jparise/vim-graphql'
+Plugin 'leafgarland/typescript-vim'
 
 Plugin 'rking/ag.vim'
 Plugin 'bling/vim-airline'

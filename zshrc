@@ -36,7 +36,7 @@ alias audio='pavucontrol'
 #vi in bash
 set -o vi
 
-export PATH=~/dotfile/scripts:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin
+export PATH=~/dotfile/scripts:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Export JAVA 1.8
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0`
