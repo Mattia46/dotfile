@@ -2,5 +2,5 @@
 	name = Mattia46
 	email = mattia.assogna@gmail.com
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true

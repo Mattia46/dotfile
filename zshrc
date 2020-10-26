@@ -48,3 +48,4 @@ if [ -f '/Users/mattia/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ma
 export HYBRIS_ROOT=~/GSK/dev
 export DUMPS=~/GSK/dumps
 export VAGRANT_ROOT=~/GSK/gskVagrant
+

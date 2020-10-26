@@ -7,6 +7,7 @@ function init(){
   xcode-select --install
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   sudo chown -R $(whoami) /usr/local
+  sudo chown -R $(whoami) $(brew --prefix)/*
   brew cask list
 }
 
