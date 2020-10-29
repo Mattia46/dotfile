@@ -45,6 +45,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
+"Autoreload file
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -83,6 +86,10 @@ set softtabstop=2
 "set smarttab
 "set shiftround
 set expandtab
+
+"Reload the file is modified or :e
+au FocusGained,BufEnter * :checktime
+set autoread
 
 "Markdown Preview & vimWiki
 let g:instant_markdown_autostart = 0
