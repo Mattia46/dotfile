@@ -31,6 +31,9 @@ sudo apt install telegram-desktop -y
 sudo apt install slack -y
 npm -g install instant-markdown-d
 
+# Necessary to copy paste in Vim and Tmux
+sudo apt install vim-gtk3
+
 #Yarn
 sudo apt remove cmdtest
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -

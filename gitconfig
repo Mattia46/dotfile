@@ -4,3 +4,5 @@
 [core]
 	autocrlf = false
 	safecrlf = true
+[credential]
+	helper = cache
