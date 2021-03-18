@@ -175,6 +175,9 @@ noremap <Leader>i gg=G
 " Autoformat
 map <Leader>f :Autoformat<CR>
 
+" Format to JSON
+map <Leader>mn :%!jq .<CR>
+
 " such very magic
 :nnoremap / /\v
 :cnoremap %s/ %s/\v

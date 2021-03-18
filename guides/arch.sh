@@ -17,6 +17,9 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
 ssh -T git@github.com
 
+# Vari
+sudo pacman -S xsel # enable copy paste in Tmux
+
 # clone dotfile
 git clone git@github.com:Mattia46/dotfile.git ~
 
