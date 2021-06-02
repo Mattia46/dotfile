@@ -7,9 +7,9 @@ sudo chown -R $(whoami) /usr/local
 #node & npm
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo apt-get install -y build-essential
+#sudo apt-get install -y build-essential
 
-#zsh
+#zsh Need to RESTART afterwards
 sudo apt install zsh
 chsh -s $(which zsh)
 sudo curl -L http://install.ohmyz.sh | sh
@@ -21,6 +21,7 @@ printf "\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n" >> .zshrc
 touch ~/.z
 
 #Varie
+sudo apt install xsel # to allow tmux to copy
 sudo apt install vim-gtk -y
 sudo apt install git -y
 sudo apt install tmux -y
@@ -64,15 +65,11 @@ xclip -sel clip < ~/.ssh/id_rsa.pub
 sh -T git@github.com
 ssh-add ~/.ssh/id_rsa # Or whenever ssh-key name you have
 
-#Vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cd ~/.vim/bundle && git clone git://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
-cd ~/.vim/bundle && git clone https://github.com/vimwiki/vimwiki.git
-mv ~/Dropbox/vimrc ~/.vimrc
-mv ~/Dropbox/tmux.conf ~/.tmux.conf
-mv ~/Dropbox/tmux-theme.sj ~/.vim/tmux-theme.sh
-mv ~/Dropbox/autoload ~/.vim/
-
+#Create config links
+ln -s dotfile/vimrc ~/.vimrc
+ln -s dotfile/zshrc ~/.zshrc
+ln -s dotfile/tmux.conf ~/.tmux.conf
+ln -s dotfile/vim ~/.vim
 
 #To install:
  #- Spotify
