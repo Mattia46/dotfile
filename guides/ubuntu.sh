@@ -62,7 +62,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
-sh -T git@github.com
+ssh -T git@github.com
 ssh-add ~/.ssh/id_rsa # Or whenever ssh-key name you have
 
 #Create config links
