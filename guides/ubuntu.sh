@@ -5,7 +5,7 @@
 sudo chown -R $(whoami) /usr/local
 
 #node & npm
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 #sudo apt-get install -y build-essential
 
@@ -62,7 +62,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
 #Paste key in github
-sh -T git@github.com
+ssh -T git@github.com
 ssh-add ~/.ssh/id_rsa # Or whenever ssh-key name you have
 
 #Create config links
