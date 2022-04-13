@@ -2,6 +2,12 @@ sudo pacman -S the_silver_searcher xclip gvim curl ranger
 sudo pacman -S w3m # Image preview for ranger
 sudo pacman -S bluez bluez-utils pulseaudio-bluetooth blueman # Blueman: is a bluetooth manager. Run it with blueman-applet
 
+# for i3
+# Install raw arch, desktop => i3
+# cifs-utils // to mount the shares
+# rofi // app loader
+# bumblee-status // already in dotfile repo
+
 # zsh
 sudo pacman -S zsh
 chsh -s $(which zsh)
