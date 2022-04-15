@@ -4,9 +4,10 @@ font pango:monospace 12
 floating_modifier $mod
 exec --no-startup-id xrandr --output DP-1 --mode 2560x1440
 exec --no-startup-id xrandr --output HDMI-1 --rotate left
-exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xrandr --output DVI-D-1 --off --output DVI-I-1 --off
+#exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id xmodmap ~/.Xmodmap
-#exec_always feh --bg-fill ~/.wallpaper/2.jpg
+#exec_always feh --bg-fill ~/wallpaper/2.jpg
 exec_always nitrogen --restore
 
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -161,9 +162,17 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   status_command ~/.dotfiles/i3config/bumblebee-status/bumblebee-status \
-      -m memory battery time pasink pasource date \
-      -p time.format="%H:%M" \
-      -t solarized
+      -m pomodoro \
+         spacer sensors cpu memory \
+         spacer currency getcrypto stock \
+         spacer traffic nic pasink\
+         spacer time date weather \
+      -p memory.format={used} \
+         currency.destinationdelimiter="/" stock.symbols="vusa.l" \
+         nic.exclude="enp4s0, lo" nic.format={ip} traffic.showname="False" \
+         time.format="%H:%M" weather.location="london" \
+          \
+      -t dracula-powerline
 #font pango:FontAwesome 10
     position top
     colors {

@@ -7,6 +7,12 @@ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth blueman # Blueman: is a bl
 # cifs-utils // to mount the shares
 # rofi // app loader
 # bumblee-status // already in dotfile repo
+# awesome-terminal-fonts // awesome 4 icon needed by bumblebee-status
+
+# Python and PIP (for bumblebee-status)
+# Install pip => sudo pacman -S python-pip
+# Install pip dependency => python3 -m pip install MODULE
+# To check missing module run => ./bumblebee-status --debug -m MODULE_NAME
 
 # zsh
 sudo pacman -S zsh
