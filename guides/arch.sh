@@ -2,11 +2,14 @@ sudo pacman -S the_silver_searcher xclip gvim curl ranger
 sudo pacman -S w3m # Image preview for ranger
 sudo pacman -S bluez bluez-utils pulseaudio-bluetooth blueman # Blueman: is a bluetooth manager. Run it with blueman-applet
 
+# Rofi, emoji and icons theme
+sudo pacman -S rofi rofi-emoji papirus-icon-theme
+
 # for i3
 # Install raw arch, desktop => i3
 # cifs-utils // to mount the shares
 # rofi // app loader
-# bumblee-status // already in dotfile repo
+# bumblee-status // already in .dotfiles repo
 # awesome-terminal-fonts // awesome 4 icon needed by bumblebee-status
 
 # Python and PIP (for bumblebee-status)
@@ -32,20 +35,20 @@ ssh -T git@github.com
 # Vari
 sudo pacman -S xsel # enable copy paste in Tmux
 
-# clone dotfile
+# clone .dotfiles
 git clone git@github.com:Mattia46/dotfile.git ~
 
 # links
-ln -s ~/dotfile/vimrc ~/.vimrc
-ln -s ~/dotfile/zshrc ~/.zshrc
-ln -s ~/dotfile/gitconfig ~/.gitconfig
-ln -s ~/dotfile/gitignore ~/.gitignore
-ln -s ~/dotfile/tmux.conf ~/.tmux.conf
-ln -s ~/dotfile/vim ~/.vim
-ln -s ~/dotfile/wallpaper ~/.wallpaper
-ln -s ~/dotfile/xinitrc ~/.xinitrc # if DMG ~/.xsession
-ln -s ~/dotfile/Xmodmap ~/.Xmodmap
-ln -s ~/dotfile/ranger.conf ~/.config/ranger/rc.conf
-ln -s ~/dotfile/i3config ~/.config/i3/config
-ln -s ~/dotfile/i3blocks ~/.config/i3blocks/config
+ln -s ~/.dotfiles/vimrc ~/.vimrc
+ln -s ~/.dotfiles/zshrc ~/.zshrc
+ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/gitignore ~/.gitignore
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/vim ~/.vim
+ln -s ~/.dotfiles/wallpaper ~/.wallpaper
+ln -s ~/.dotfiles/xinitrc ~/.xinitrc # if DMG ~/.xsession
+ln -s ~/.dotfiles/Xmodmap ~/.Xmodmap
+ln -s ~/.dotfiles/ranger.conf ~/.config/ranger/rc.conf
+ln -s ~/.dotfiles/i3config ~/.config/i3/config
+ln -s ~/.dotfiles/i3blocks ~/.config/i3blocks/config
 
