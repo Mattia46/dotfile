@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 10";
+  font: "JetBrainsMono Nerd Font Medium 15";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
@@ -46,7 +46,7 @@ element-text {
 }
 
 element-icon {
-  size: 30;
+  size: 50;
 }
 
 entry {
@@ -62,7 +62,7 @@ inputbar {
 listview {
   padding: 8 12;
   background-color: @bg;
-  columns: 1;
+  columns: 2;
   lines: 8;
 }
 

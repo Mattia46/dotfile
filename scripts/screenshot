@@ -1,2 +1,11 @@
-#!/bin/sh
-DISPLAY=:0 scrot -q 70 -s /home/mattia/Pictures/'Screen-%Y-%m-%d-%H_%M_%S.jpg'
+
+#! /bin/sh
+output='/home/mattia/pictures/screenshots/%Y-%m-%d-%T-screenshot.png'
+
+case "$1" in
+	"select") scrot "$output" --select --line mode=edge || exit ;;
+	"window") scrot "$output" --focused --border || exit ;;
+	*) scrot "$output" || exit ;;
+esac
+
+notify-send "Screenshot taken."

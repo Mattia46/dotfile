@@ -5,6 +5,12 @@ sudo pacman -S bluez bluez-utils pulseaudio-bluetooth blueman # Blueman: is a bl
 # Rofi, emoji and icons theme
 sudo pacman -S rofi rofi-emoji papirus-icon-theme
 
+# Screenshot
+sudo pacman -S scrot
+
+# notification
+sudo pacman -S dunst
+
 # for i3
 # Install raw arch, desktop => i3
 # cifs-utils // to mount the shares
