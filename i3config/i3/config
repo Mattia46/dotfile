@@ -1,14 +1,18 @@
 set $mod Mod4
-font pango:monospace 12
+font pango:Ubuntu Nerd Font Complete Mono 12
 
 floating_modifier $mod
-exec --no-startup-id xrandr --output DP-1 --mode 2560x1440
-exec --no-startup-id xrandr --output HDMI-1 --rotate left
-exec --no-startup-id xrandr --output DVI-D-1 --off --output DVI-I-1 --off
+#exec --no-startup-id xrandr --output DP-1 --scale 1.5x1.5
+exec --no-startup-id xrandr --output DP-1 --scale 0.7x0.7
+#exec --no-startup-id xrandr --output HDMI-1 --rotate left
+#exec --no-startup-id xrandr --output DVI-D-1 --off --output DVI-I-1 --off
 #exec --no-startup-id dex --autostart --environment i3
-#exec --no-startup-id xmodmap ~/.Xmodmap
-#exec_always feh --bg-fill ~/wallpaper/2.jpg
-exec_always nitrogen --restore
+exec_always --no-startup-id nitrogen --restore
+#exec_always dunst
+
+# Redshift warmer color: London coordinates
+exec --no-startup-id redshift -l 51.50722:-0.1275
+exec --no-startup-id picom
 
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
@@ -33,25 +37,13 @@ bindsym $mod+d exec rofi -show drun
 
 # Make screenshot
 bindsym $mod+p exec /home/mattia/.dotfiles/scripts/screenshot
-bindsym $mod+Shift+p exec /home/mattia/.dotfiles/scripts/screenshot -- select
+bindsym $mod+Shift+p exec --no-startup-id /home/mattia/.dotfiles/scripts/screenshot select
 
 bindsym $mod+l exec systemctl suspend
 bindsym $mod+Shift+w exec firefox
 
 # kill focused window
 bindsym $mod+q kill
-
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-## change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -177,7 +169,7 @@ bar {
          time.format="%H:%M" weather.location="london" \
           \
       -t dracula-powerline
-#font pango:FontAwesome 10
+
     position top
     colors {
       separator #268bd2

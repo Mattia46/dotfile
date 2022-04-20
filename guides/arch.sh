@@ -2,8 +2,24 @@ sudo pacman -S the_silver_searcher xclip gvim curl ranger
 sudo pacman -S w3m # Image preview for ranger
 sudo pacman -S bluez bluez-utils pulseaudio-bluetooth blueman # Blueman: is a bluetooth manager. Run it with blueman-applet
 
-# Rofi, emoji and icons theme
-sudo pacman -S rofi rofi-emoji papirus-icon-theme
+# Fonts
+# Location: /usr/share/fonts | ~/.local/share/fonts | /usr/local/share/fonts
+# tools: fc-cache -f (clear cache) | fc-list (list of fonts installed) | fc-match --verbose
+# FONT_NAME
+
+# Terminal
+sudo pacman -S alacritty
+
+# Brightness adjustment
+sudo pacman -S redshit
+
+# Picom => transparency etc
+sudo pacman -S picom
+
+# Rofi, emoji, calc and icons theme
+# To load new fonts run lc-cache -fv then restart
+sudo pacman -S noto-fonts-emoji # emoji
+sudo pacman -S rofi rofi-emoji papirus-icon-theme rofi-calc
 
 # Screenshot
 sudo pacman -S scrot
