@@ -142,7 +142,8 @@ ab ipb import ipdb; ipdb.set_trace()
 "nnoremap <Tab> <C-W><C-W>
 
 "Fugitive map
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gb :Git Blame<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gm :diffget //2<CR>
