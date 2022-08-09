@@ -141,8 +141,12 @@ ab ipb import ipdb; ipdb.set_trace()
 "nnoremap <S-Tab> <C-j>W
 "nnoremap <Tab> <C-W><C-W>
 
-"Fugitive map
-nnoremap <leader>gs :Gstatus<CR>
+" ALE Details
+nnoremap <leader>al :ALEDetail<CR>
+
+" Fugitive map
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gb :Git Blame<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gm :diffget //2<CR>
@@ -221,3 +225,6 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 set path+=**
 
 "autocmd BufWritePre * :%s/\s\+$//e "removes trailing white space on save
+"
+" REACT
+let g:NERDCustomDelimiters = { 'javascript.tsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' } }
