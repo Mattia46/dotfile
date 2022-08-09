@@ -11,6 +11,6 @@ ln -s dotfile/vim ~/.vim
 ln -s dotfile/wallpaper ~/.wallpaper
 ln -s dotfile/xinitrc ~/.xinitrc
 ln -s dotfile/Xmodmap ~/.Xmodmap
-vim +PluginInstall
+vim +PlugInstall
 
 ```

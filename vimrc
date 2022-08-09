@@ -1,55 +1,46 @@
 set nocompatible              " be iMproved, required
 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+call plug#begin()
 
-filetype off
-set rtp+=~/.vim/Vundle.vim/
-cal vundle#begin()
+Plug 'cohlin/vim-colorschemes'
+Plug 'morhetz/gruvbox'
+Plug 'Mofiqul/dracula.nvim'
+"Plug 'trevordmiller/nova-vim'
 
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'cohlin/vim-colorschemes'
-Plugin 'morhetz/gruvbox'
-"Plugin 'trevordmiller/nova-vim'
-
-Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive' "Wrap all Git commang
-Plugin 'tpope/vim-repeat' "Il punto ripete l'ultima azione
-Plugin 'tpope/vim-surround'
-Plugin 'w0rp/ale' "syntastic alternative
+Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive' "Wrap all Git commang
+Plug 'tpope/vim-repeat' "Il punto ripete l'ultima azione
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale' "syntastic alternative
 
 " Notes
-Plugin 'vimwiki/vimwiki'
-Plugin 'mattn/calendar-vim'
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
 
 " Syntax and Highlight
-Plugin 'yuezk/vim-js'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'jparise/vim-graphql'
-Plugin 'leafgarland/typescript-vim'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
+Plug 'leafgarland/typescript-vim'
 
-Plugin 'rking/ag.vim'
-Plugin 'bling/vim-airline'
+Plug 'rking/ag.vim'
+Plug 'bling/vim-airline'
 
-Plugin 'roman/golden-ratio' "auto-reside the windows
-Plugin 'scrooloose/nerdtree'
-Plugin 'xuyuanp/nerdtree-git-plugin'
-Plugin 'scrooloose/nerdcommenter'
+Plug 'roman/golden-ratio' "auto-reside the windows
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
 
-Plugin 'sjl/vitality.vim' "Change Cursor
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'sjl/vitality.vim' "Change Cursor
+Plug 'ntpeters/vim-better-whitespace'
 
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plug 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 "Autoreload file
-Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 "ALE syntax
 let b:ale_linters = {'javascript': ['eslint', 'tslint']}
@@ -75,16 +66,12 @@ set showmatch "flashes matching brackets or parentheses"
 set wildmenu "Enable tab complete. First shows all matches, then starts cycling throught"
 
 
-"set viminfo=
-" Make it obvious where 80 characters is
 set textwidth=100
 
 "INDENTATION
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-"set smarttab
-"set shiftround
 set expandtab
 
 "Reload the file is modified or :e
@@ -132,14 +119,6 @@ if ($uname == 'Linux')
 else
     set clipboard=unnamed
 endif
-
-" Type ipb+space  Add python breakPoint
-ab ipb import ipdb; ipdb.set_trace()
-
-
-" Move between splits
-"nnoremap <S-Tab> <C-j>W
-"nnoremap <Tab> <C-W><C-W>
 
 "Fugitive map
 nnoremap <leader>gs :Git<CR>
@@ -192,11 +171,12 @@ set number "mi da il numero assuluto della linea in cui sono
 let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will conflict with nerdTree
 
 "COLORSCHEME
-"set t_ut=
+set t_ut=
 set t_Co=256
 syntax enable
 colorscheme gruvbox
 set background=dark
+"colorscheme dracula
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nowritebackup
