@@ -25,4 +25,4 @@ alias tmkill='tmux kill-session -t'
 #vi in bash
 set -o vi
 
-export PATH=~/dotfile/scripts:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+export PATH=$PATH:~/dotfile/scripts:/opt/homebrew/bin

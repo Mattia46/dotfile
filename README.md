@@ -2,7 +2,9 @@
 
 ```
 git clone git@github.com:Mattia46/.vim.git
-ln -s dotfile/vimrc ~/.vimrc
+ln -s dotfile/vimrc ~/.vimrc # vim config
+ln -s dotfile/nvim ~/.config/ # Nvim config
+# For nvim you have to install the executable first
 ln -s dotfile/zshrc ~/.zshrc
 ln -s dotfile/gitconfig ~/.gitconfig
 ln -s dotfile/gitignore ~/.gitignore
