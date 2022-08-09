@@ -6,14 +6,10 @@ return require('packer').startup(function()
   use 'rking/ag.vim'
   use 'tpope/vim-fugitive'
   use 'scrooloose/nerdtree'
-  --use 'xuyuanp/nerdtree-git-plugin'
+  use 'xuyuanp/nerdtree-git-plugin'
   use 'scrooloose/nerdcommenter'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
-  use 'kyazdani42/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
 end)

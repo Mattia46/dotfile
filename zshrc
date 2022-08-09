@@ -8,6 +8,8 @@ alias gpl='git pull'
 alias sta='git status'
 alias gck='git checkout'
 
+alias vim='nvim'
+
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
