@@ -13,4 +13,5 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ctrlpvim/ctrlp.vim'
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 end)

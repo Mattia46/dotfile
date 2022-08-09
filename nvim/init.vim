@@ -1,4 +1,3 @@
-"z Change <Leader>
 let mapleader = ","
 
 set ruler         " show the cursor position all the time
@@ -8,7 +7,6 @@ set laststatus=2  " Always shows the status line at the bottom
 set history=50
 set incsearch     " do incremental searching
 set colorcolumn=+1
-set showmatch
 set wildmenu
 set textwidth=100
 set relativenumber
@@ -28,14 +26,15 @@ set autoread
 
 " PLUGINS
 lua require('plugins')
+lua require('config.lspconfig')
 
 "SEARCH
 let g:ackprg = 'ag --vimgrep'
 
 if executable('ag')
-    set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    let g:ctrlp_use_caching = 0
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
 endif
 
 "Search the word under the cursor or with K
@@ -48,14 +47,14 @@ nnoremap \ :Ag<SPACE>
 
 "clipboard per copiare da vim ed incollare altrove:
 if ($uname == 'Linux')
-    set clipboard=unnamedplus
+  set clipboard=unnamedplus
 else
-    set clipboard=unnamed
+  set clipboard=unnamed
 endif
 
 "Fugitive map
 nnoremap <leader>gs :Git<CR>
-nnoremap <leader>gb :GBlame<CR>
+nnoremap <leader>gb :Git Blame<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gm :diffget //2<CR>
@@ -78,9 +77,6 @@ let NERDTreeShowHidden=1
 " JJ escape
 inoremap jj <ESC>:wa<CR>
 
-" Autoformat
-map <Leader>f :Autoformat<CR>
-
 " Format to JSON, require jq
 map <Leader>mn :%!jq .<CR>
 
@@ -90,7 +86,9 @@ map <Leader>mn :%!jq .<CR>
 
 "Move between windows
 nnoremap <Tab> <C-W><C-W>
-"let g:NumberToggleTrigger="<leader>r" "without this <C-n>(relative number) will conflict with nerdTree
+
+" Indentation
+noremap <Leader>i gg=G
 
 "COLORSCHEME
 colorscheme dracula

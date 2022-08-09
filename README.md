@@ -1,5 +1,11 @@
 # vimDotfile
 
+
+#### Package to install for LSP
+```bash
+npm install -g typescript typescript-language-server
+
+```
 ```
 git clone git@github.com:Mattia46/.vim.git
 ln -s dotfile/vimrc ~/.vimrc # vim config
