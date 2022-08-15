@@ -14,4 +14,9 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline-themes'
   use 'ctrlpvim/ctrlp.vim'
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  -- syntax
+  use 'maxmellon/vim-jsx-pretty'
+  use 'jparise/vim-graphql'
+  use 'leafgarland/typescript-vim'
+  --use 'peitalin/vim-jsx-typescript'
 end)

@@ -20,6 +20,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" remove highlights
+set nohlsearch
+"nnoremap <Leader>/ :noh<cr>
+
 "Reload the file is modified or :e
 au FocusGained,BufEnter * :checktime
 set autoread
@@ -54,7 +58,7 @@ endif
 
 "Fugitive map
 nnoremap <leader>gs :Git<CR>
-nnoremap <leader>gb :Git Blame<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gd :Gvdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gm :diffget //2<CR>
@@ -69,10 +73,18 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 
 " Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+" <c-w>=   Always opens it to the left
+map <C-n> :NERDTreeToggle<CR> <c-w>=
 let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', 'node_modules']
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1
+let NERDTreeWinSizeMax=20
+
+" quits NERDTree once opened a file
+let g:NERDTreeQuitOnOpen = 1
+
+" trigger MarkDown preview
+nmap <Leader>md :MarkdownPreview<CR>
 
 " JJ escape
 inoremap jj <ESC>:wa<CR>
@@ -97,5 +109,28 @@ set path+=**
 
 autocmd BufWritePre * :%s/\s\+$//e "removes trailing white space on save
 
-"open vimrc
-nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.config/nvim/init.vim<cr>
+" Automatically resize active split to 110 width
+augroup ReduceNoise
+    autocmd!
+    autocmd WinEnter * :call ResizeSplits()
+augroup END
+function! ResizeSplits()
+    set winwidth=110
+    wincmd =
+endfunction
+
+"open nvim
+nnoremap <leader>ev <C-w><C-v><C-l>:e $HOME/.config/nvim/init.vim<cr>
+
+" allow to wildmode to suggest autocomplete
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
