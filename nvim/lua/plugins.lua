@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'Mofiqul/dracula.nvim'
+  use 'morhetz/gruvbox'
   use 'rking/ag.vim'
   use 'tpope/vim-fugitive'
   use 'scrooloose/nerdtree'
@@ -13,10 +14,6 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ctrlpvim/ctrlp.vim'
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-  -- syntax
-  use 'maxmellon/vim-jsx-pretty'
-  use 'jparise/vim-graphql'
-  use 'leafgarland/typescript-vim'
-  --use 'peitalin/vim-jsx-typescript'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-treesitter/nvim-treesitter'
 end)

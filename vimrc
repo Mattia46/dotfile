@@ -66,7 +66,7 @@ set showmatch "flashes matching brackets or parentheses"
 set wildmenu "Enable tab complete. First shows all matches, then starts cycling throught"
 
 
-set textwidth=100
+set textwidth=80
 
 "INDENTATION
 set tabstop=2

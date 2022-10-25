@@ -1,0 +1,8 @@
+[user]
+	name = mattia21
+	email = mattia@checkstep.com
+[core]
+	autocrlf = false
+	safecrlf = true
+[credential]
+	helper = cache

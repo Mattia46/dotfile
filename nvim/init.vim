@@ -103,7 +103,7 @@ nnoremap <Tab> <C-W><C-W>
 noremap <Leader>i gg=G
 
 "COLORSCHEME
-colorscheme dracula
+colorscheme gruvbox
 
 set path+=**
 
@@ -115,7 +115,7 @@ augroup ReduceNoise
     autocmd WinEnter * :call ResizeSplits()
 augroup END
 function! ResizeSplits()
-    set winwidth=110
+    set winwidth=100
     wincmd =
 endfunction
 

@@ -1,0 +1,8 @@
+[user]
+	name = Mattia46
+	email = mattia.assogna@gmail.com
+[core]
+	autocrlf = false
+	safecrlf = true
+[credential]
+	helper = cache
