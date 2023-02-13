@@ -6,14 +6,26 @@ return require('packer').startup(function()
   use 'morhetz/gruvbox'
   use 'rking/ag.vim'
   use 'tpope/vim-fugitive'
-  use 'scrooloose/nerdtree'
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-surround'
+  -- use 'scrooloose/nerdtree'
   use 'xuyuanp/nerdtree-git-plugin'
-  use 'scrooloose/nerdcommenter'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
-  use 'ryanoasis/vim-devicons'
+  -- use 'ryanoasis/vim-devicons'
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ctrlpvim/ctrlp.vim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'maxmellon/vim-jsx-pretty'
+  use 'jparise/vim-graphql'
+  use 'leafgarland/typescript-vim'
 end)

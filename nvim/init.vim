@@ -31,6 +31,8 @@ set autoread
 " PLUGINS
 lua require('plugins')
 lua require('config.lspconfig')
+lua require('config.treesitter')
+lua require('config.tree')
 
 "SEARCH
 let g:ackprg = 'ag --vimgrep'
@@ -40,6 +42,7 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
+let g:ctrlp_max_files=0
 
 "Search the word under the cursor or with K
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -74,7 +77,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Nerdtree
 " <c-w>=   Always opens it to the left
-map <C-n> :NERDTreeToggle<CR> <c-w>=
+map <C-n> :NvimTreeToggle<CR> <c-w>=
 let NERDTreeIgnore=['\.git','\.DS_Store','\.pdf', 'node_modules']
 let NERDTreeHighlightCursorline = 1
 let NERDTreeShowHidden=1
