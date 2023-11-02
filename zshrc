@@ -32,3 +32,14 @@ alias tmkill='tmux kill-session -t'
 set -o vi
 
 export PATH=$PATH:~/dotfile/scripts:/opt/homebrew/bin
+
+# AUTOCOMPLETION
+
+# initialize autocompletion
+autoload -U compinit && compinit
+# history setup
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt HIST_EXPIRE_DUPS_FIRST
