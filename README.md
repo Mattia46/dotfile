@@ -7,13 +7,13 @@ npm install -g typescript typescript-language-server
 ```
 
 ### Pkg to install
-zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3lock
+zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3lock wget
 
 
 #### Customisation
 
 ```
-sudo apt install materia-gtk-theme papirus-icon-theme lxappearance
+sudo pacman -S materia-gtk-theme papirus-icon-theme lxappearance
 
 # Transparent terminal Picom
 sudo pacman -S picom
@@ -21,6 +21,15 @@ sudo pacman -S picom
 
 ```
 git clone https://github.com/Mattia46/dotfile.git
+```
+
+# ZSH
+```
+chsh -l # list all shell path
+chsh -s /PATH-TO-ZSH-SHELL# list all shell path
+
+# Oh my zsh
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ```
 
 # Nvim
@@ -61,9 +70,6 @@ ln -s ~/.dotfiles/xinitrc ~/.xinitrc
 ln -s ~/.dotfiles/Xmodmap ~/.Xmodmap
 ln -s ~/.dotfiles/Xresouces ~/.Xresources
 ln -s ~/.dotfiles/xinitrc ~/.xinitrc
-
-mkdir ~/.config/i3blocks
-ln -s ~/.dotfiles/i3blocks ~/.config/i3blocks/config
 ```
 
 #### Enable LightDM login
@@ -85,10 +91,13 @@ sudo pacman -S pavucontrol # Audio controller GUI
 sudo pacman -S blueman # Bluetooth applet
 ```
 
-### i3-wm config
+### i3 config folder
 ```
-rm ~/.config/i3/config
-ln -s ~/.dotfiles/i3config ~/.config/i3/config
+rm ~/.config/i3
+ln -s ~/.dotfiles/config/i3blocks ~/.config
+ln -s ~/.dotfiles/config/i3 ~/.config
+ln -s ~/.dotfiles/config/nvim ~/.config
+ln -s ~/.dotfiles/config/rofi ~/.config
 ```
 
 ### Fonts

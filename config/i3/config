@@ -34,7 +34,7 @@ exec_always picom -f
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -font "pango:Ubuntu Regular 16" -modi emoji -show drun shh emoji -kb-custom-1 Ctrl+c
+bindsym $mod+d exec rofi -font "pango:Ubuntu Regular 16" -show drun 
 
 # Lock screen
 bindsym $mod+x exec i3lock
