@@ -10,7 +10,6 @@ npm install -g typescript typescript-language-server
 zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3 i3blocks i3lock wget ranger nautilus usbutils ly bat xorg xorg-server
 
 
-
 ## Clone repo
 ```
 git clone https://github.com/Mattia46/dotfile.git ~/.dotfiles
@@ -40,11 +39,13 @@ nvim
 ### Virtual Machine
 qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs
 
-### Utilities
-mpv # media player
-ncdu # disk scanner
-ranger w3m # w3m allows image preview
 
+### Utilities
+mpv => media player
+ncdu => disk scanner
+ranger w3m => w3m allows image preview
+gvfs-smb => allow Nautilus to connect to smb
+keepassxc
 
 ### Customisation
 
