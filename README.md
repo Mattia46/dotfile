@@ -7,23 +7,16 @@ npm install -g typescript typescript-language-server
 ```
 
 ### Pkg to install
-zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3 i3blocks i3lock wget
+zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3 i3blocks i3lock wget ranger nautilus usbutils ly bat xorg xorg-server
 
 
-#### Customisation
 
+## Clone repo
 ```
-sudo pacman -S materia-gtk-theme papirus-icon-theme lxappearance
-
-# Transparent terminal Picom
-sudo pacman -S picom
+git clone https://github.com/Mattia46/dotfile.git ~/.dotfiles
 ```
 
-```
-git clone https://github.com/Mattia46/dotfile.git
-```
-
-# ZSH
+### ZSH
 ```
 chsh -l # list all shell path
 chsh -s /PATH-TO-ZSH-SHELL# list all shell path
@@ -32,7 +25,7 @@ chsh -s /PATH-TO-ZSH-SHELL# list all shell path
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 ```
 
-# Nvim
+### Nvim
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -42,6 +35,24 @@ ln -s ~/.dotfiles/nvim ~/.config/ # Nvim config
 # then install pkgs
 nvim
 :PackerInstall
+```
+
+### Virtual Machine
+qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat dmidecode ebtables iptables libguestfs
+
+### Utilities
+mpv # media player
+ncdu # disk scanner
+ranger w3m # w3m allows image preview
+
+
+### Customisation
+
+```
+sudo pacman -S materia-gtk-theme papirus-icon-theme lxappearance
+
+# Transparent terminal Picom
+sudo pacman -S picom
 ```
 
 ### Commons
@@ -72,10 +83,10 @@ ln -s ~/.dotfiles/Xresouces ~/.Xresources
 ln -s ~/.dotfiles/xinitrc ~/.xinitrc
 ```
 
-#### Enable LightDM login
+#### Login desktop manage LY
 
 ```
-sudo systemctl enable --now lightdm.service
+sudo pacman -S ly
 ```
 
 ### Bluetooth and Audio
@@ -98,6 +109,7 @@ ln -s ~/.dotfiles/config/i3blocks ~/.config
 ln -s ~/.dotfiles/config/i3 ~/.config
 ln -s ~/.dotfiles/config/nvim ~/.config
 ln -s ~/.dotfiles/config/rofi ~/.config
+ln -s ~/.dotfiles/config/ranger ~/.config
 ```
 
 ### Fonts
