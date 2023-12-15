@@ -7,7 +7,7 @@ npm install -g typescript typescript-language-server
 ```
 
 ### Pkg to install
-zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3lock wget
+zsh tmux curl git nvim xclip firefox rofi rofi-calc rofi-emoji nitrogen lsusb-utils bluez bluez-utils man-db tldr lightdm lightdm-gtk-greeter i3 i3blocks i3lock wget
 
 
 #### Customisation
@@ -103,7 +103,7 @@ ln -s ~/.dotfiles/config/rofi ~/.config
 ### Fonts
 
 ```
-ln -s ~/.dotfiles/fonts /usr/local/share/
+ln -s ~/.dotfiles/fonts ~/.local/share/
 fc-cache -vf
 
 fc-list # should show the new fonts

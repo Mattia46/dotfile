@@ -53,16 +53,16 @@ T_WARN=70
 T_CRIT=85
 #SENSOR_CHIP=""
 
-[volume-pulseaudio]
-command=$HOME/.dotfiles/scripts/i3blocks/volume-pulseaudio
-interval=1
-SHORT_FORMAT="${SYMB}${VOL}%"
-LONG_FORMAT="${SYMB}${VOL}%"
+# [volume-pulseaudio]
+# command=$HOME/.dotfiles/scripts/i3blocks/volume-pulseaudio
+# interval=1
+# SHORT_FORMAT="${SYMB}${VOL}%"
+# LONG_FORMAT="${SYMB}${VOL}%"
 
-[backlight]
-command=$HOME/.dotfiles/scripts/i3blocks/backlight
-label=
-interval=1
+# [backlight]
+# command=$HOME/.dotfiles/scripts/i3blocks/backlight
+# label=
+# interval=1
 
 # [battery]
 # command=$HOME/.dotfiles/scripts/i3blocks/battery
