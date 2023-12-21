@@ -7,10 +7,11 @@ alias gps='git push'
 alias gpl='git pull'
 alias sta='git status'
 alias gck='git checkout'
+alias amend='git commit --amend'
 
 alias vim='nvim'
 
-export ZSH=~/.dotfiles/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 
@@ -25,7 +26,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
   [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
-  export PATH=$PATH:~/dotfile/scripts:/opt/homebrew/bin
+  export PATH=$PATH:~/.dotfiles/scripts:/opt/homebrew/bin
   source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 

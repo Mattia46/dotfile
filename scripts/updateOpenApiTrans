@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd ~/Project/Checkstep/transparency-hub
+
+pwd
+
+ls -al | grep env
+source ${PWD}/.env
+
+if [[ -z "${VITE_OPEN_API_PASSWORD}" ]]; then
+  echo "Not found"
+else
+  echo ${VITE_OPEN_API_PASSWORD}
+  curl https://api.staging.checkstep.com/transparency/openapi.json -u dev:${VITE_OPEN_API_PASSWORD} -o data/openapi.json --create-dirs --fail
+
+  npx -y openapi-typescript-codegen --input ./data/openapi.json --output ./src/api/types --client axios --name AppClient
+
+  npm run prettier
+fi
