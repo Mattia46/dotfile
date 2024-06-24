@@ -16,8 +16,7 @@ return require('packer').startup(function()
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
   }
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'

@@ -5,12 +5,5 @@
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
-  view = {
-    mappings = {
-      list = {
-        { key = "s", action = "vsplit"},
-      }
-    }
-  },
   filters = { exclude = { ".gitignore" } }
 })
