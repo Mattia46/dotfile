@@ -5,5 +5,5 @@
 vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
-  filters = { exclude = { ".gitignore" } }
+  -- filters = { exclude = { ".gitignore" } }
 })
