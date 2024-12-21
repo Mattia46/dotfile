@@ -23,6 +23,17 @@ return require('packer').startup(function()
   use 'ctrlpvim/ctrlp.vim'
   use 'neovim/nvim-lspconfig'
   use 'nvim-treesitter/nvim-treesitter'
+  use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+    -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function()
+      require('markdown').setup({})
+    end,
+  })
+  -- install without yarn or npm
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'maxmellon/vim-jsx-pretty'
   use 'jparise/vim-graphql'
