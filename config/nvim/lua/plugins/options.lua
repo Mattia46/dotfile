@@ -1,4 +1,4 @@
-vim.cmd("colorscheme gruvbox") -- set color theme
+vim.cmd("colorscheme nordfox") -- set color theme
 
 vim.g.startify_custom_header = "" -- startify remove random quote
 

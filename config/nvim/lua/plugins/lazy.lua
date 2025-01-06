@@ -62,7 +62,7 @@ require('lazy').setup({
   },
 
   { "morhetz/gruvbox", as = "gruvbox" },
-
+  { "EdenEast/nightfox.nvim" },
   {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end

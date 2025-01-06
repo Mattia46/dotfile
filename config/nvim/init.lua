@@ -1,5 +1,6 @@
 require('options')
 require('keymaps')
+require('workflows')
 require('plugins.lazy')
 require('plugins.tele')
 require('plugins.treesitter')
@@ -9,5 +10,4 @@ require('plugins.ctrlp')
 require('plugins.obsidian')
 require('plugins.keymaps')
 require('plugins.options')
-require('workflows')
 
