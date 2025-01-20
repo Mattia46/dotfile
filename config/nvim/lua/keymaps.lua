@@ -15,6 +15,9 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -- search and replace the word under cursor in the file with <leader>s
 vim.keymap.set("n", "<leader>/", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- show lint error message in a window + allow to jump in and copy the error
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic in float" })
+
 vim.wo.colorcolumn = '80'
 
 vim.keymap.set('n', '/', '/\\v')
@@ -35,3 +38,5 @@ vim.api.nvim_create_autocmd('WinEnter', {
   end,
 })
 
+-- remap "+p to p for Mac in order to paste from outside the terminal
+vim.api.nvim_set_keymap('n', 'p', '"+p', { noremap = true, silent = true })
